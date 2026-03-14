@@ -1,2 +1,11 @@
-!/usr/bin/env sh
-./gradlew assembleDebug
+#!/usr/bin/env sh
+
+# Gradle wrapper script
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+
+if [ -f "$DIR/gradlew.bat" ]; then
+  ./gradlew.bat "$@"
+else
+  echo "Gradle wrapper not configured"
+  exit 1
+fi
